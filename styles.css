@@ -1,0 +1,137 @@
+/* Базовые стили для светлой темы (по умолчанию) */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Светлый фон */
+    color: #000; /* Темный текст */
+}
+
+.calculator {
+    width: 270px;
+    background-color: #fff; /* Светлый фон калькулятора */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+    width: 92%;
+    height: 60px;
+    background-color: #e0e0e0; /* Светлый дисплей */
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 10px;
+    font-size: 28px;
+    overflow: hidden;
+    color: #000; /* Темный текст */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Общие стили */
+.advanced-buttons {
+    display: grid; /* Для выравнивания кнопок */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+/* Показываем кнопки */
+.advanced-buttons.show {
+    max-height: 500px; /* Достаточно, чтобы вместить все кнопки */
+    opacity: 1;
+}
+
+
+button {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    background-color: #d0d0d0; /* Светлый фон кнопок */
+    border: none;
+    border-radius: 25px;
+    color: #000; /* Темный текст */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.orange {
+    background-color: #ffa500; /* Оранжевые кнопки */
+}
+
+button.orange:hover {
+    background-color: #ffcc80;
+}
+
+button:hover {
+    background-color: #c0c0c0;
+}
+
+button:active {
+    background-color: #a0a0a0;
+}
+
+/* Темная тема */
+.dark-theme {
+    background-color: #222; /* Темный фон */
+    color: #fff; /* Светлый текст */
+}
+
+.dark-theme .calculator {
+    background-color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme .display {
+    background-color: #444;
+    color: #fff;
+}
+
+.dark-theme button {
+    background-color: #555;
+    color: #fff;
+}
+
+.dark-theme button.orange {
+    background-color: #ff9500;
+}
+
+.dark-theme button.orange:hover {
+    background-color: #f1c88d;
+}
+
+.dark-theme .theme-toggle {
+    background-color: #555;
+    color: #fff;
+}
+
+
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 15px;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+}
+

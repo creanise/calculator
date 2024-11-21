@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator with Theme Toggle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="theme-toggle" onclick="toggleTheme()">Dark Mode</div>
+    <div class="calculator">
+        <div class="display" id="display"></div>
+        <div class="buttons">
+            <!-- Основные кнопки -->
+            <button onclick="clearDisplay()">AC</button>
+            <button onclick="toggleSign()">+/-</button>
+            <button onclick="calculatePercentage()">%</button>
+            <button class="orange" onclick="appendToDisplay('/')">/</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button class="orange" onclick="appendToDisplay('*')">x</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button class="orange" onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button class="orange" onclick="appendToDisplay('+')">+</button>
+            <button onclick="toggleAdvanced()">Еще</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button class="orange" onclick="calculateResult()">=</button>
+        </div>
+
+        <!-- Дополнительные кнопки -->
+        <div class="advanced-buttons" id="advanced-buttons">
+            <button onclick="appendToDisplay('**2')">x²</button>
+            <button onclick="appendToDisplay('**3')">x³</button>
+            <button onclick="appendToDisplay('Math.E')">e</button>
+            <button onclick="calculateFactorial()">x!</button>
+            <button onclick="calculateFunction('Math.sin')">sin</button>
+            <button onclick="calculateFunction('Math.cos')">cos</button>
+            <button onclick="calculateFunction('Math.tan')">tan</button>
+            <button onclick="calculateFunction('1/Math.tan')">cot</button>
+            <button onclick="calculateFunction('Math.sqrt')">√</button>
+            <button onclick="appendToDisplay('(')">(</button>
+            <button onclick="appendToDisplay(')')">)</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
